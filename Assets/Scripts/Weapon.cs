@@ -9,7 +9,6 @@ public class Weapon : MonoBehaviour
     [SerializeField] float damageType1 = 10f;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitEffect;
-    Animation anim; 
 
     void Update()
     {
