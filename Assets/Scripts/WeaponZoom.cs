@@ -11,7 +11,7 @@ public class WeaponZoom : MonoBehaviour
     [SerializeField] float zoomedIn4x = 20f;
     [SerializeField] float zoomedSensitivity = 0.5f;
     [SerializeField] float normalSensitivity = 2f;
-    public RigidbodyFirstPersonController fppController;
+    public RigidbodyFirstPersonController fppController;   //접근 안될 때는 name space 때문이니 ctrl + . 로 추가!
 
 
     void Start()
