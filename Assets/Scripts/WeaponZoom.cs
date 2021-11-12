@@ -26,7 +26,7 @@ public class WeaponZoom : MonoBehaviour
 
     public void AimDownSights()
     {
-        if (Input.GetButtonDown("Fire2") && !isADS)
+        if (Input.GetMouseButtonDown(1) && !isADS)
         {
             Debug.Log("4x ADS");
             fpsCam.fieldOfView = zoomedIn4x;
@@ -37,7 +37,7 @@ public class WeaponZoom : MonoBehaviour
             isADS = true;
         }
 
-        else if (Input.GetButtonDown("Fire2") && isADS)
+        else if (Input.GetMouseButtonDown(1) && isADS)
         {
             fpsCam.fieldOfView = zoomedOUt;
             

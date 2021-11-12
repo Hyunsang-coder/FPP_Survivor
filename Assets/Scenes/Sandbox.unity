@@ -3525,6 +3525,18 @@ PrefabInstance:
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 509766410}
+    - target: {fileID: 266034876887952760, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
+      propertyPath: damageType1
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 266034876887952760, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
+      propertyPath: timeBetweenShots
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1656834294418632324, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2804437807527823421, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3589,5 +3601,13 @@ PrefabInstance:
       propertyPath: hitEffect
       value: 
       objectReference: {fileID: 1775700883}
+    - target: {fileID: 8924668735082489147, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
+      propertyPath: damageType1
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924668735082489147, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
+      propertyPath: timeBetweenShots
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
