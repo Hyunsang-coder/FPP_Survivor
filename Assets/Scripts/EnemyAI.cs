@@ -52,7 +52,7 @@ public class EnemyAI : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
 
-        // transform.rotation = where the target is, we need to ratte at a certain speed
+        // transform.rotation = where the target is, we need to rotate at a certain speed
     }
 
     void OnDrawGizmosSelected()
