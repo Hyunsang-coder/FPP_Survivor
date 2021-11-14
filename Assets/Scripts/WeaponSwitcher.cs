@@ -6,12 +6,13 @@ using UnityEngine;
 public class WeaponSwitcher : MonoBehaviour
 {
     [SerializeField] int currentWeapon = 0;
-    
+    [SerializeField] float switchTime = 0.5f;
+
     void Start()
     {
         SetWeaponActive();
-        
     }
+
 
     void Update()
     {
@@ -22,13 +23,14 @@ public class WeaponSwitcher : MonoBehaviour
 
         if (previousWeapon != currentWeapon)
         {
-            SetWeaponActive();
+            Invoke("SetWeaponActive", switchTime);
+            //SetWeaponActive();
         }
     }
 
     private void ProcessScrollWheel()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
             if (currentWeapon >= transform.childCount - 1)
             {
@@ -40,7 +42,7 @@ public class WeaponSwitcher : MonoBehaviour
             }
         }
 
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
             if (currentWeapon < 0)
             {
@@ -53,7 +55,7 @@ public class WeaponSwitcher : MonoBehaviour
         }
     }
 
-    private void ProcessWeaponInput()
+    void ProcessWeaponInput()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -67,8 +69,6 @@ public class WeaponSwitcher : MonoBehaviour
         {
             currentWeapon = 2;
         }
-
-
     }
 
     public void SetWeaponActive()
@@ -88,9 +88,6 @@ public class WeaponSwitcher : MonoBehaviour
             weaponIndex++;
         }
 
-
     }
-
-    // Update is called once per frame
     
 }

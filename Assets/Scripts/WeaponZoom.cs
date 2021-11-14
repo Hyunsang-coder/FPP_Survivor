@@ -13,10 +13,15 @@ public class WeaponZoom : MonoBehaviour
     [SerializeField] float normalSensitivity = 2f;
     public RigidbodyFirstPersonController fppController;   //접근 안될 때는 name space 때문이니 ctrl + . 로 추가!
 
-
+    
+    void OnDisable()
+    {
+        ZoomOut();
+        Debug.Log("ZoomOut");
+    }
     void Start()
     {
-        fppController = GetComponent<RigidbodyFirstPersonController>();
+        fppController = GetComponentInParent<RigidbodyFirstPersonController>();
     }
 
     void Update()
@@ -28,24 +33,33 @@ public class WeaponZoom : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1) && !isADS)
         {
-            Debug.Log("4x ADS");
-            fpsCam.fieldOfView = zoomedIn4x;
-                        
-            fppController.mouseLook.XSensitivity = zoomedSensitivity;
-            fppController.mouseLook.YSensitivity = zoomedSensitivity;
-
-            isADS = true;
+            ZoomIn();
         }
 
         else if (Input.GetMouseButtonDown(1) && isADS)
         {
-            fpsCam.fieldOfView = zoomedOUt;
-            
-            fppController.mouseLook.XSensitivity = normalSensitivity;
-            fppController.mouseLook.YSensitivity = normalSensitivity;
-            
-            isADS = false;
+            ZoomOut();
 
         }
+    }
+
+    void ZoomIn()
+    {
+        fpsCam.fieldOfView = zoomedIn4x;
+
+        fppController.mouseLook.XSensitivity = zoomedSensitivity;
+        fppController.mouseLook.YSensitivity = zoomedSensitivity;
+
+        isADS = true;
+    }
+
+    void ZoomOut()
+    {
+        fpsCam.fieldOfView = zoomedOUt;
+
+        fppController.mouseLook.XSensitivity = normalSensitivity;
+        fppController.mouseLook.YSensitivity = normalSensitivity;
+
+        isADS = false;
     }
 }

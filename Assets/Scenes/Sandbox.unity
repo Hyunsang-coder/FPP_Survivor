@@ -2778,6 +2778,17 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_TargetDisplay: 0
+--- !u!114 &1326069897 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1060785896, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
+  m_PrefabInstance: {fileID: 6809639388584885257}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c9795a96c094f4cbde4d65546aa9b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1350320727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 90d8e09703679534295bd2cacb73d6de, type: 3}
@@ -3525,33 +3536,21 @@ PrefabInstance:
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 509766410}
-    - target: {fileID: 266034876887952760, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
-      propertyPath: damageType1
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 266034876887952760, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
-      propertyPath: timeBetweenShots
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1656834294418632324, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
-      propertyPath: timeBetweenShots
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2804437807527823421, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3721163099015449537, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6809639387731198078, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 275155901042460008, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
+      propertyPath: fppController
+      value: 
+      objectReference: {fileID: 1326069897}
+    - target: {fileID: 2158783907528354587, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
+      propertyPath: fppController
+      value: 
+      objectReference: {fileID: 1326069897}
     - target: {fileID: 6809639388066299119, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809639388066299119, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6809639388066390219, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
       propertyPath: m_RootOrder
@@ -3597,17 +3596,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8910609271406549310, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
+      propertyPath: fppController
+      value: 
+      objectReference: {fileID: 1326069897}
     - target: {fileID: 8924668735082489147, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
       propertyPath: hitEffect
       value: 
       objectReference: {fileID: 1775700883}
-    - target: {fileID: 8924668735082489147, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
-      propertyPath: damageType1
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8924668735082489147, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
-      propertyPath: timeBetweenShots
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7660027890998644557, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
+    - {fileID: 4944560683010317941, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
+    - {fileID: 1371395467982806571, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2ab55993b63f6d9498f9052c26b458b9, type: 3}
