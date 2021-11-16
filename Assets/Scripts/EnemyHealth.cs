@@ -5,7 +5,9 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] float enemyHP = 100f;
-    
+    bool isDead = false;
+
+    public bool IsDead() { return isDead; }
 
     public void TakeDamage(float weaponDamage)
     {
@@ -14,8 +16,16 @@ public class EnemyHealth : MonoBehaviour
         enemyHP -= weaponDamage;
         if (enemyHP <= 0)
         {
-            Destroy(gameObject);
-            Debug.Log(transform.name + " has been destroyed.");
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        if (isDead) return;
+
+        isDead = true;
+        GetComponent<Animator>().SetTrigger("Die");
+        Destroy(gameObject, 3f);
     }
 }
